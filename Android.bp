@@ -2121,34 +2121,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libfgauge_gm30",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libfgauge_gm30.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libmtk_drvb",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libh264dec_customize",
     owner: "xiaomi",
     strip: {
@@ -28526,6 +28498,55 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libmtkmipc-ril",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libmtkmipc-ril.so",
+            ],
+            shared_libs: [
+                "libmtkutils",
+                "librilfusion",
+                "libmtknetutils",
+                "libratconfig",
+                "libmtksysutils",
+                "libmtkhardware_legacy",
+                "libsysenv",
+                "libmtkrilutils",
+                "libcrypto",
+                "libmtkcutils",
+                "libmtkproperty",
+                "libmtkrillog",
+                "libmtkconfigutils",
+                "libmtktinyxml",
+                "libmtkares",
+                "libnvram",
+                "vendor.mediatek.hardware.nvram@1.1",
+                "libbinder",
+                "libhardware",
+                "libhidlbase",
+                "libhidltransport",
+                "libmtknetcap",
+                "libwpfa",
+                "libaedv",
+                "libmipc",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libmtknetcap",
     owner: "xiaomi",
     strip: {
@@ -29127,6 +29148,34 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "librpc",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/librpc.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libccci_util",
+                "libpower",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libsensor_custom",
     owner: "xiaomi",
     strip: {
@@ -29419,6 +29468,64 @@ cc_prebuilt_library_shared {
                 "libmtkrillog",
                 "libmtkrilutils",
                 "libmtk-ril",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libviagpsrpc",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libviagpsrpc.so",
+            ],
+            shared_libs: [
+                "librpc",
+                "liblog",
+                "libcutils",
+                "libccci_util",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libviamipc-ril",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libviamipc-ril.so",
+            ],
+            shared_libs: [
+                "libmtkcutils",
+                "libmtkutils",
+                "libmtkproperty",
+                "libmtkrillog",
+                "libmtkrilutils",
+                "libmtkmipc-ril",
                 "libc++",
                 "libc",
                 "libm",
@@ -32395,9 +32502,9 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
-    name: "manifest_media_c2_V1_1_default.xml",
+    name: "manifest_media_c2_V1_2_default.xml",
     owner: "xiaomi",
-    src: "proprietary/vendor/etc/vintf/manifest/manifest_media_c2_V1_1_default.xml",
+    src: "proprietary/vendor/etc/vintf/manifest/manifest_media_c2_V1_2_default.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     soc_specific: true,
@@ -32595,61 +32702,6 @@ cc_prebuilt_binary {
                 "libmisight",
                 "libTEECommon",
                 "libmfido_isee",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "fuelgauged",
-    owner: "xiaomi",
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/bin/fuelgauged",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "fuelgauged_nvram",
-    owner: "xiaomi",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/fuelgauged_nvram",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libutils",
-                "libnvram",
-                "liblog",
                 "libc++",
                 "libc",
                 "libm",

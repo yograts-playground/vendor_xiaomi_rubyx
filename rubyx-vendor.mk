@@ -8,6 +8,8 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_COPY_FILES += \
     vendor/xiaomi/rubyx/proprietary/vendor/etc/.tp/thermal.conf:$(TARGET_COPY_OUT_VENDOR)/etc/.tp/thermal.conf \
     vendor/xiaomi/rubyx/proprietary/vendor/etc/.tp/thermal.off.conf:$(TARGET_COPY_OUT_VENDOR)/etc/.tp/thermal.off.conf \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/apdb/APDB_MT6853_S01__W2302:$(TARGET_COPY_OUT_VENDOR)/etc/apdb/APDB_MT6853_S01__W2302 \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/apdb/APDB_MT6853_S01__W2302_ENUM:$(TARGET_COPY_OUT_VENDOR)/etc/apdb/APDB_MT6853_S01__W2302_ENUM \
     vendor/xiaomi/rubyx/proprietary/vendor/etc/audio_param_m16/AW_DSP.bin:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param_m16/AW_DSP.bin \
     vendor/xiaomi/rubyx/proprietary/vendor/etc/audio_param_m16/AudioParamOptions.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param_m16/AudioParamOptions.xml \
     vendor/xiaomi/rubyx/proprietary/vendor/etc/audio_param_m16/AudioParamOptions_vext.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param_m16/AudioParamOptions_vext.xml \
@@ -313,8 +315,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/rubyx/proprietary/vendor/etc/init/android.hardware.neuralnetworks@1.3-service-mtk-neuron.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.neuralnetworks@1.3-service-mtk-neuron.rc \
     vendor/xiaomi/rubyx/proprietary/vendor/etc/init/android.hardware.secure_element@1.2-service-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.secure_element@1.2-service-mediatek.rc \
     vendor/xiaomi/rubyx/proprietary/vendor/etc/init/camerahalserver.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/camerahalserver.rc \
-    vendor/xiaomi/rubyx/proprietary/vendor/etc/init/fuelgauged_init.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fuelgauged_init.rc \
-    vendor/xiaomi/rubyx/proprietary/vendor/etc/init/fuelgauged_nvram_init.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fuelgauged_nvram_init.rc \
     vendor/xiaomi/rubyx/proprietary/vendor/etc/init/gsm0710muxd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/gsm0710muxd.rc \
     vendor/xiaomi/rubyx/proprietary/vendor/etc/init/init.cccimdinit.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.cccimdinit.rc \
     vendor/xiaomi/rubyx/proprietary/vendor/etc/init/init.cccirpcd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.cccirpcd.rc \
@@ -342,6 +342,218 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/rubyx/proprietary/vendor/etc/init/vendor.xiaomi.hardware.mtdservice@1.3-iseeservice.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hardware.mtdservice@1.3-iseeservice.rc \
     vendor/xiaomi/rubyx/proprietary/vendor/etc/init/vpud.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vpud.rc \
     vendor/xiaomi/rubyx/proprietary/vendor/etc/init/wlan_assistant.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wlan_assistant.rc \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/md/cacerts/ikev2/DigiCertGlobalRootCA.crt:$(TARGET_COPY_OUT_VENDOR)/etc/md/cacerts/ikev2/DigiCertGlobalRootCA.crt \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/md/cacerts/ikev2/DigiCertGlobalRootG2.crt:$(TARGET_COPY_OUT_VENDOR)/etc/md/cacerts/ikev2/DigiCertGlobalRootG2.crt \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/md/cacerts/ikev2/DigiCertGlobalRootG3.crt:$(TARGET_COPY_OUT_VENDOR)/etc/md/cacerts/ikev2/DigiCertGlobalRootG3.crt \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/md/cacerts/ikev2/Entrust.net_Certification_Authority_2048.cer:$(TARGET_COPY_OUT_VENDOR)/etc/md/cacerts/ikev2/Entrust.net_Certification_Authority_2048.cer \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/md/cacerts/ikev2/GeoTrust_PCA_G3_Root.der:$(TARGET_COPY_OUT_VENDOR)/etc/md/cacerts/ikev2/GeoTrust_PCA_G3_Root.der \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/md/cacerts/ikev2/GeoTrust_Primary_CA.der:$(TARGET_COPY_OUT_VENDOR)/etc/md/cacerts/ikev2/GeoTrust_Primary_CA.der \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/md/cacerts/ikev2/GeoTrust_Primary_CA_G2_ECC.der:$(TARGET_COPY_OUT_VENDOR)/etc/md/cacerts/ikev2/GeoTrust_Primary_CA_G2_ECC.der \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/md/cacerts/ikev2/GlobalSign_root_CA.crt:$(TARGET_COPY_OUT_VENDOR)/etc/md/cacerts/ikev2/GlobalSign_root_CA.crt \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/md/cacerts/ikev2/LibertyGlobalEnterprise-Root-CA-G1.crt:$(TARGET_COPY_OUT_VENDOR)/etc/md/cacerts/ikev2/LibertyGlobalEnterprise-Root-CA-G1.crt \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/md/cacerts/ikev2/Root-R3.cer:$(TARGET_COPY_OUT_VENDOR)/etc/md/cacerts/ikev2/Root-R3.cer \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/md/cacerts/ikev2/Root_CA_1003.crt:$(TARGET_COPY_OUT_VENDOR)/etc/md/cacerts/ikev2/Root_CA_1003.crt \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/md/cacerts/ikev2/VeriSignClass3G4.der:$(TARGET_COPY_OUT_VENDOR)/etc/md/cacerts/ikev2/VeriSignClass3G4.der \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/md/cacerts/ikev2/VeriSignClass3G5.der:$(TARGET_COPY_OUT_VENDOR)/etc/md/cacerts/ikev2/VeriSignClass3G5.der \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/md/cacerts/ikev2/VeriSignUniversalRootCertification.der:$(TARGET_COPY_OUT_VENDOR)/etc/md/cacerts/ikev2/VeriSignUniversalRootCertification.der \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/md/cacerts/ikev2/thawte.der:$(TARGET_COPY_OUT_VENDOR)/etc/md/cacerts/ikev2/thawte.der \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/md/cacerts/tls/AAACertificateServices.crt:$(TARGET_COPY_OUT_VENDOR)/etc/md/cacerts/tls/AAACertificateServices.crt \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/md/cacerts/tls/CertumCA.crt:$(TARGET_COPY_OUT_VENDOR)/etc/md/cacerts/tls/CertumCA.crt \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/md/cacerts/tls/CertumOrganizationValidationCASHA2.crt:$(TARGET_COPY_OUT_VENDOR)/etc/md/cacerts/tls/CertumOrganizationValidationCASHA2.crt \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/md/cacerts/tls/CertumTrustedNetworkCA.crt:$(TARGET_COPY_OUT_VENDOR)/etc/md/cacerts/tls/CertumTrustedNetworkCA.crt \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/md/cacerts/tls/CyberTrustJapanPublicCAG3.crt:$(TARGET_COPY_OUT_VENDOR)/etc/md/cacerts/tls/CyberTrustJapanPublicCAG3.crt \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/md/cacerts/tls/DigiCertGlobalRootCA.crt:$(TARGET_COPY_OUT_VENDOR)/etc/md/cacerts/tls/DigiCertGlobalRootCA.crt \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/md/cacerts/tls/DigiCertSHA2SecureServerCA.crt:$(TARGET_COPY_OUT_VENDOR)/etc/md/cacerts/tls/DigiCertSHA2SecureServerCA.crt \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/md/cacerts/tls/DomenySslDvCertificationAuthority.crt:$(TARGET_COPY_OUT_VENDOR)/etc/md/cacerts/tls/DomenySslDvCertificationAuthority.crt \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/md/cacerts/tls/EntrustCertificationAuthorityL1K.cer:$(TARGET_COPY_OUT_VENDOR)/etc/md/cacerts/tls/EntrustCertificationAuthorityL1K.cer \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/md/cacerts/tls/EntrustRootCertificationAuthority.crt:$(TARGET_COPY_OUT_VENDOR)/etc/md/cacerts/tls/EntrustRootCertificationAuthority.crt \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/md/cacerts/tls/EntrustRootCertificationAuthorityG2.crt:$(TARGET_COPY_OUT_VENDOR)/etc/md/cacerts/tls/EntrustRootCertificationAuthorityG2.crt \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/md/cacerts/tls/EntrustRootCertificationAuthorityG2_root.crt:$(TARGET_COPY_OUT_VENDOR)/etc/md/cacerts/tls/EntrustRootCertificationAuthorityG2_root.crt \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/md/cacerts/tls/GoDaddyRootCertificateAuthorityG2.crt:$(TARGET_COPY_OUT_VENDOR)/etc/md/cacerts/tls/GoDaddyRootCertificateAuthorityG2.crt \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/md/cacerts/tls/GoDaddySecureCertificateAuthorityG2.crt:$(TARGET_COPY_OUT_VENDOR)/etc/md/cacerts/tls/GoDaddySecureCertificateAuthorityG2.crt \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/md/cacerts/tls/KPN_BV_PKIoverheid_Organisatie_Server_CA-G3_2019.cer:$(TARGET_COPY_OUT_VENDOR)/etc/md/cacerts/tls/KPN_BV_PKIoverheid_Organisatie_Server_CA-G3_2019.cer \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/md/cacerts/tls/StaatDerNederlandenEVRootCA.crt:$(TARGET_COPY_OUT_VENDOR)/etc/md/cacerts/tls/StaatDerNederlandenEVRootCA.crt \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/md/cacerts/tls/StaatderNederlandenOrganisatieServicesCA-G3.cer:$(TARGET_COPY_OUT_VENDOR)/etc/md/cacerts/tls/StaatderNederlandenOrganisatieServicesCA-G3.cer \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/md/cacerts/tls/StaatderNederlandenRootCA-G3.cer:$(TARGET_COPY_OUT_VENDOR)/etc/md/cacerts/tls/StaatderNederlandenRootCA-G3.cer \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/md/cacerts/tls/certSIGN_ROOT_CA.crt:$(TARGET_COPY_OUT_VENDOR)/etc/md/cacerts/tls/certSIGN_ROOT_CA.crt \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/md/cacerts/tls/securitycertificateofKPN.crt:$(TARGET_COPY_OUT_VENDOR)/etc/md/cacerts/tls/securitycertificateofKPN.crt \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_MD_OTA_CONFIG.ini:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_MD_OTA_CONFIG.ini \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_GENERAL.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_GENERAL.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_1.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_1.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_10.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_10.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_100.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_100.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_1001.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_1001.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_1002.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_1002.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_1003.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_1003.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_1004.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_1004.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_101.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_101.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_102.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_102.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_103.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_103.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_104.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_104.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_105.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_105.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_106.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_106.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_107.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_107.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_108.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_108.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_109.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_109.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_11.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_11.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_110.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_110.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_111.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_111.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_112.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_112.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_113.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_113.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_114.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_114.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_115.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_115.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_116.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_116.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_117.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_117.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_118.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_118.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_119.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_119.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_12.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_12.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_120.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_120.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_121.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_121.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_122.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_122.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_123.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_123.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_124.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_124.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_125.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_125.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_126.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_126.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_127.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_127.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_128.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_128.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_129.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_129.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_130.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_130.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_131.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_131.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_132.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_132.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_133.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_133.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_134.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_134.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_135.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_135.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_136.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_136.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_137.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_137.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_138.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_138.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_139.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_139.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_140.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_140.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_141.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_141.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_143.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_143.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_144.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_144.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_145.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_145.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_146.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_146.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_147.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_147.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_148.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_148.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_149.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_149.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_15.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_15.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_150.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_150.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_151.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_151.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_152.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_152.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_153.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_153.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_154.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_154.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_155.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_155.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_156.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_156.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_157.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_157.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_158.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_158.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_159.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_159.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_16.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_16.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_160.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_160.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_161.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_161.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_162.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_162.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_163.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_163.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_164.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_164.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_165.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_165.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_166.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_166.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_167.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_167.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_168.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_168.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_169.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_169.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_17.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_17.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_170.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_170.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_171.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_171.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_172.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_172.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_173.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_173.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_174.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_174.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_175.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_175.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_176.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_176.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_177.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_177.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_178.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_178.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_179.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_179.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_18.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_18.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_180.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_180.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_181.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_181.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_182.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_182.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_183.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_183.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_184.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_184.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_185.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_185.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_186.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_186.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_187.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_187.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_188.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_188.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_189.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_189.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_19.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_19.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_190.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_190.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_191.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_191.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_192.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_192.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_193.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_193.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_194.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_194.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_195.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_195.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_196.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_196.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_197.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_197.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_198.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_198.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_199.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_199.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_2.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_2.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_20.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_20.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_200.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_200.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_201.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_201.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_202.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_202.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_203.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_203.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_204.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_204.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_205.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_205.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_206.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_206.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_207.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_207.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_208.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_208.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_209.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_209.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_210.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_210.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_211.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_211.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_212.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_212.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_213.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_213.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_217.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_217.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_220.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_220.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_222.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_222.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_223.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_223.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_224.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_224.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_225.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_225.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_227.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_227.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_228.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_228.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_231.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_231.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_233.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_233.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_234.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_234.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_235.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_235.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_237.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_237.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_243.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_243.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_244.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_244.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_274.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_274.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_275.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_275.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_276.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_276.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_277.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_277.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_279.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_279.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_281.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_281.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_282.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_282.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_283.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_283.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_284.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_284.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_285.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_285.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_287.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_287.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_288.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_288.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_291.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_291.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_292.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_292.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_3.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_3.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_304.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_304.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_306.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_306.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_310.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_310.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_312.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_312.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_315.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_315.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_318.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_318.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_329.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_329.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_335.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_335.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_341.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_341.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_385.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_385.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_5.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_5.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_50.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_50.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_6.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_6.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_7.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_7.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_8.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_8.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_9.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_9.mcfopota \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/mdota/MTK_OTA.mcfota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OTA.mcfota \
     vendor/xiaomi/rubyx/proprietary/vendor/etc/slp_conf:$(TARGET_COPY_OUT_VENDOR)/etc/slp_conf \
     vendor/xiaomi/rubyx/proprietary/vendor/etc/smartpa_param/AW_DSP.bin:$(TARGET_COPY_OUT_VENDOR)/etc/smartpa_param/AW_DSP.bin \
     vendor/xiaomi/rubyx/proprietary/vendor/etc/special_pws_channel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/special_pws_channel.xml \
@@ -588,7 +800,6 @@ PRODUCT_PACKAGES += \
     libbessound_hd_mtk_vendor \
     libblisrc32_vendor \
     libcvsd_mtk \
-    libfgauge_gm30 \
     libh264dec_customize \
     libh264dec_sa.ca7 \
     libh264enc_sa.ca7 \
@@ -1544,6 +1755,7 @@ PRODUCT_PACKAGES += \
     libmtkconfigutils \
     libmtkhardware_legacy \
     libmtkisp_metadata \
+    libmtkmipc-ril \
     libmtknetcap \
     libmtknetutils \
     libmtkrilutils \
@@ -1565,6 +1777,7 @@ PRODUCT_PACKAGES += \
     libpqpconfig \
     libratconfig \
     librilfusion \
+    librpc \
     libsensor_custom \
     libstereoinfoaccessor_vsdof \
     libstorage_otp \
@@ -1576,6 +1789,8 @@ PRODUCT_PACKAGES += \
     libudf \
     liburee_meta_drmkeyinstall \
     libvia-ril \
+    libviagpsrpc \
+    libviamipc-ril \
     libvideofilter_only \
     libvideomode \
     libvidhance \
@@ -1670,7 +1885,7 @@ PRODUCT_PACKAGES += \
     gnss-mtk.xml \
     gnss@2.1-service.xml \
     manifest_android.hardware.drm@1.4-service.widevine.xml \
-    manifest_media_c2_V1_1_default.xml \
+    manifest_media_c2_V1_2_default.xml \
     manifest_microtrust_wechat.xml \
     manifest_vendor.dolby.hardware.dms.xml \
     microtrust_thh_manifest.xml \
@@ -1680,8 +1895,6 @@ PRODUCT_PACKAGES += \
     ccci_rpcd \
     conninfra_loader \
     fidoca_isee \
-    fuelgauged \
-    fuelgauged_nvram \
     gsm0710muxd \
     android.hardware.bluetooth@1.1-service-mediatek \
     android.hardware.drm@1.4-service.widevine \
