@@ -32423,6 +32423,17 @@ cc_prebuilt_library_shared {
 }
 
 android_app_import {
+    name: "MtkGbaService",
+    owner: "xiaomi",
+    apk: "proprietary/system/priv-app/MtkGbaService/MtkGbaService.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+}
+
+android_app_import {
     name: "HotwordEnrollmentOKGoogleRISCV",
     owner: "xiaomi",
     apk: "proprietary/product/priv-app/HotwordEnrollmentOKGoogleRISCV/HotwordEnrollmentOKGoogleRISCV.apk",
