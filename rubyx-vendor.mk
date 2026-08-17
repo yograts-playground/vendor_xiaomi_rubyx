@@ -1676,7 +1676,6 @@ PRODUCT_PACKAGES += \
     libmlipay_isee@1.1 \
     libmml \
     libmnetlink_v104 \
-    libmnl \
     libmp3dec_mtk \
     libmpbase \
     libmsnr \
